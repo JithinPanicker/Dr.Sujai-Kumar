@@ -1,0 +1,21 @@
+{
+  "name": "AstroVision Consultation",
+  "short_name": "AstroVision",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f3a1d",
+  "theme_color": "#1e5631",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3255/3255724.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3255/3255724.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AstroVision - Consultation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e0f2f1">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- PROFILE SECTION (Like Image 1) -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://ui-avatars.com/api/?name=Sujai+Kumar&background=2b9e8f&color=fff&size=128" alt="Astrologer Profile" class="profile-img">
+                <div class="profile-info">
+                    <h2>Sujai Kumar C K</h2>
+                    <p>5.3K followers • 4.2K following</p>
+                    <p class="bio">📷 Digital creator • 📍 Kalady • 👨‍🏫 Assistant Professor</p>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="btn-secondary">Respond</button>
+                <button class="btn-secondary">Message</button>
+                <button class="btn-primary">Follow</button>
+            </div>
+        </div>
+
+        <!-- BOOKING FORM SECTION (Like Image 2) -->
+        <div class="form-card">
+            
+            <!-- Sidebar / Steps -->
+            <div class="form-sidebar">
+                <div class="logo">ASTR<span>O</span>VISION</div>
+                <h3>Book Consultation</h3>
+                
+                <ul class="steps">
+                    <li class="step active">
+                        <span class="step-circle">✓</span>
+                        <span class="step-text">Personal Details</span>
+                    </li>
+                    <li class="step">
+                        <span class="step-circle">2</span>
+                        <span class="step-text">Payment</span>
+                    </li>
+                    <li class="step">
+                        <span class="step-circle">3</span>
+                        <span class="step-text">Confirmation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Form Area -->
+            <div class="form-content">
+                <form id="bookingForm">
+                    <p class="section-title">YOUR PERSONAL DETAILS</p>
+                    
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="phone-input-wrapper">
+                            <span class="country-code">🇮🇳 +91</span>
+                            <input type="tel" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+
+                    <div class="payment-info">
+                        <p>Consultation Fee: <strong>₹250</strong> / hour</p>
+                        <small>Extension charges apply per hour.</small>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="submit-btn" id="payBtn">
+                            Make Payment & Book
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Soft mint green background to match the DNB aesthetic */
+    background-color: #e0f2f1;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- PROFILE CARD (Image 1 Style) --- */
+.profile-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2b9e8f;
+}
+
+.profile-info h2 {
+    font-size: 20px;
+    color: #1a202c;
+    margin-bottom: 2px;
+}
+
+.profile-info p {
+    font-size: 13px;
+    color: #718096;
+}
+
+.profile-info .bio {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #4a5568;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+.profile-actions button {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s;
+}
+
+.btn-secondary {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.btn-secondary:active {
+    background: #cbd5e0;
+}
+
+.btn-primary {
+    background: #2b9e8f;
+    color: white;
+}
+
+.btn-primary:active {
+    background: #21867a;
+}
+
+/* --- FORM CARD (Image 2 Style) --- */
+.form-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column; /* Mobile-first: stack vertically */
+    overflow: hidden;
+}
+
+/* Sidebar/Steps Header */
+.form-sidebar {
+    background: #f8fafc;
+    padding: 25px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2b9e8f;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.logo span {
+    color: #ffd700;
+}
+
+.form-sidebar h3 {
+    font-size: 18px;
+    color: #1a202c;
+    margin-bottom: 20px;
+}
+
+.steps {
+    list-style: none;
+    display: flex;
+    flex-direction: row; /* Horizontal on mobile */
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    opacity: 0.5;
+}
+
+.step.active {
+    opacity: 1;
+}
+
+.step-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #cbd5e0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step.active .step-circle {
+    background: #2b9e8f;
+}
+
+.step-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+/* Main Form Content */
+.form-content {
+    padding: 25px 20px;
+}
+
+.section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #718096;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    color: #4a5568;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1a202c;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+    background-color: #f8fafc;
+}
+
+.input-group input:focus {
+    border-color: #2b9e8f;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(43, 158, 143, 0.1);
+}
+
+.phone-input-wrapper {
+    display: flex;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    overflow: hidden;
+}
+
+.phone-input-wrapper:focus-within {
+    border-color: #2b9e8f;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(43, 158, 143, 0.1);
+}
+
+.country-code {
+    padding: 12px;
+    background: #edf2f7;
+    font-size: 14px;
+    border-right: 1px solid #e2e8f0;
+    color: #4a5568;
+}
+
+.phone-input-wrapper input {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none !important;
+}
+
+.payment-info {
+    background: #f0fdfa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccfbf1;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.payment-info p {
+    font-size: 15px;
+    color: #0f766e;
+}
+
+.payment-info strong {
+    font-size: 20px;
+    color: #0d9488;
+}
+
+.payment-info small {
+    font-size: 11px;
+    color: #14b8a6;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-btn {
+    background: #2b9e8f;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%; /* Full width for mobile */
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(43, 158, 143, 0.3);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+    background: #21867a;
+}
+
+/* Desktop / Tablet View (Restoring the split sidebar look) */
+@media (min-width: 600px) {
+    .form-card {
+        flex-direction: row;
+    }
+    .form-sidebar {
+        width: 35%;
+        border-right: 1px solid #e2e8f0;
+        border-bottom: none;
+        padding-top: 40px;
+    }
+    .steps {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    .step {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    /* Vertical line connecting steps */
+    .step::after {
+        content: '';
+        position: absolute;
+        left: 11px;
+        top: 30px;
+        width: 2px;
+        height: 30px;
+        background: #cbd5e0;
+    }
+    .step:last-child::after {
+        display: none;
+    }
+    .step.active::after {
+        background: #2b9e8f;
+    }
+    .form-content {
+        width: 65%;
+        padding: 40px 30px;
+    }
+}
